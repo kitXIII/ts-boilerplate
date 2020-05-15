@@ -1,6 +1,7 @@
 import ts from '@wessberg/rollup-plugin-ts';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
 import pkg from './package.json';
 
 export default {
@@ -11,5 +12,5 @@ export default {
             format: 'es'
         }
     ],
-    plugins: [resolve({ browser: true }), commonjs(), ts()]
+    plugins: [resolve({ browser: true }), commonjs(), json(), ts()]
 };
