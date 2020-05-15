@@ -12,7 +12,7 @@ Thumbs.db
 
 ## Build
 build/
-dist/
+dist/**/*
 
 ## Env
 env/*
