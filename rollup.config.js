@@ -12,5 +12,13 @@ export default {
             format: 'es'
         }
     ],
-    plugins: [resolve({ browser: true }), commonjs(), json(), ts()]
+    plugins: [
+        resolve({ browser: true }),
+        commonjs(),
+        json(),
+        ts({
+            allowJs: true,
+            include: ['src/**/*']
+        })
+    ]
 };

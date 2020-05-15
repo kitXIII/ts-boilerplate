@@ -1,13 +1,13 @@
 {
   "name": "ts-test",
   "version": "0.0.1",
-  "description": "test typescript",
+  "description": "typescript boilerplate",
   "module": "dist/index.js",
   "files": [
     "dist"
   ],
   "type": "module",
-  "types": "dist/index.d.ts",
+  "types": "dist/types",
   "scripts": {
     "clean": "rimraf dist/*",
     "prebuild": "npm run clean",
