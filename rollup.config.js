@@ -1,4 +1,6 @@
-import typescript from 'rollup-plugin-typescript2';
+import ts from '@wessberg/rollup-plugin-ts';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import pkg from './package.json';
 
 export default {
@@ -9,6 +11,5 @@ export default {
             format: 'es'
         }
     ],
-    // external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
-    plugins: [typescript({ useTsconfigDeclarationDir: true })]
+    plugins: [resolve({ browser: true }), commonjs(), ts()]
 };
