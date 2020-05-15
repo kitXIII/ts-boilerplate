@@ -1,4 +1,4 @@
-import aver from '../src';
+import { aver } from '../src';
 
 test('aver', () => {
     expect(aver(5, 3)).toBe(4);
