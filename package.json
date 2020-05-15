@@ -4,6 +4,9 @@
   "description": "test typescript",
   "main": "dist/index.js",
   "scripts": {
+    "clean": "rimraf dist/*",
+    "prebuild": "npm run clean",
+    "precompile": "npm run clean",
     "test": "jest",
     "build": "webpack",
     "compile": "tsc -p .",
@@ -26,6 +29,7 @@
     "jest": "26.0.1",
     "jest-cli": "26.0.1",
     "prettier": "2.0.5",
+    "rimraf": "3.0.2",
     "source-map-loader": "0.2.4",
     "ts-jest": "25.5.1",
     "ts-loader": "7.0.4",
