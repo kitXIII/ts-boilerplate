@@ -1,4 +1,5 @@
 const path = require('path');
+const EsmWebpackPlugin = require('@purtuga/esm-webpack-plugin');
 
 module.exports = {
     // mode: 'production',
@@ -30,7 +31,10 @@ module.exports = {
         extensions: ['.ts', '.js']
     },
     output: {
+        library: 'core',
+        libraryTarget: 'var',
         filename: 'core.js',
         path: path.resolve(__dirname, 'dist')
-    }
+    },
+    plugins: [new EsmWebpackPlugin()]
 };
